@@ -23,7 +23,7 @@ for k = 1 :45: numFrames             %4 set as number of skiping frames
             tempP = [tempP p(i,j)];
         end
     end
-    p = temp1';
+    p = tempP';
     p = 2*p - 1;
 
     rseq = randperm(normX*normY);

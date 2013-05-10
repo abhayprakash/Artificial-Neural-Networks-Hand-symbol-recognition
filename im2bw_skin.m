@@ -1,6 +1,6 @@
 function [ out ] = im2bw_skin( image, X, Y )
 
-out = zeros(X, Y)
+out = zeros(X, Y);
 %% Segment skin on the basis of colour
 for i=1:X
     for j=1:Y

@@ -5,18 +5,19 @@ load w;
 normX = 50;
 normY = 50;
 
-readerobj = VideoReader('vid.mp4');
+readerobj = VideoReader('vid2.mp4');
 vidFrames = read(readerobj);
 [x y z numFrames] = size(vidFrames); %get(readerobj, 4)%
-for k = 1 :45: numFrames             %4 set as number of skiping frames
+for k = 1 :47: numFrames             %4 set as number of skiping frames
     in_fig = vidFrames(:,:,:,k);
-    %in_fig=zeros(40,40,3);
     %in_fig = imrotate(in_fig, -90);
+    %figure;
     %imshow(in_fig);
     p = crop(in_fig, normX, normY);
     p11 = im2bw_skin(p, normX, normY);
     p = p11;
-
+    %figure;
+    %imshow(p);
     tempP = [];
     for i=1:normX
         for j = 1:normY
@@ -25,7 +26,7 @@ for k = 1 :45: numFrames             %4 set as number of skiping frames
     end
     p = tempP';
     p = 2*p - 1;
-
+    
     rseq = randperm(normX*normY);
     
     for i = 1:(normX*normY)

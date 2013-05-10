@@ -13,7 +13,7 @@ end
 
 %% convert it into black and white
 
-bw1=double(im2bw(original,0.41));
+bw1=double(im2bw(original,0.3));
 
 %% add noise on it and then remove it.
 J = imnoise(bw1,'salt & pepper',0.0001);

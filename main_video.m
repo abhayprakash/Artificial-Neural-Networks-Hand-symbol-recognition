@@ -6,7 +6,7 @@ readerobj = mmreader('vid2.mp4');
 vidFrames = read(readerobj);
 num = 1;
 [x y z numFrames] = size(vidFrames) %get(readerobj, 4)%
-for k = 1 :47: numFrames             %4 set as number of skiping frames
+for k = 1 :7: numFrames             %4 set as number of skiping frames
     imwrite(vidFrames(:,:,:,k), strcat('gest',num2str(num),'.jpg'));
     num = num + 1;
 end

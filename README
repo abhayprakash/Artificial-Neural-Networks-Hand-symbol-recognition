@@ -1,0 +1,8 @@
+Way to run:
+	- For Patternnet: Run 'main.m' script.
+
+	- For Hopfield network: 
+		- Train the network: Run 'main_train.m'
+		- Run 'main_test.m'
+
+Note: In case you want to test/reuse this code, email me for the dataset - it is self prepared.

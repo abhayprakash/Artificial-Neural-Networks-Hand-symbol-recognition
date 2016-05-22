@@ -1,4 +1,4 @@
-Way to run: // Dataset need to be present, contact me if you need that.
+Way to run:
 	- For Patternnet: Run 'main.m' script 
 
 	- For Hopfield network: 
